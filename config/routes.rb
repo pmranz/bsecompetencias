@@ -1,4 +1,8 @@
 Bsecompetencias::Application.routes.draw do
+  resources :levels
+
+  resources :skill_types
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
