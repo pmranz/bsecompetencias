@@ -1,5 +1,6 @@
 GEM
   remote: http://rubygems.org/
+  remote: http://gemcutter.org/
   specs:
     abstract (1.0.0)
     actionmailer (3.0.5)
@@ -30,6 +31,7 @@ GEM
     activesupport (3.0.5)
     arel (2.0.10)
     builder (2.1.2)
+    declarative_authorization (0.5.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     i18n (0.6.0)
@@ -69,5 +71,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  declarative_authorization
   rails (= 3.0.5)
   sqlite3
