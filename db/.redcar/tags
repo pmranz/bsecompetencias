@@ -1,0 +1,7 @@
+1312403306
+CreateLevels	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802203223_create_levels.rb	class CreateLevels 
+CreateSkillTypes	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802202723_create_skill_types.rb	class CreateSkillTypes 
+down	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802202723_create_skill_types.rb	  def self.down
+down	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802203223_create_levels.rb	  def self.down
+up	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802202723_create_skill_types.rb	  def self.up
+up	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802203223_create_levels.rb	  def self.up
