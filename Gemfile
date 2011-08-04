@@ -1,12 +1,17 @@
 source 'http://rubygems.org'
 source 'http://gemcutter.org'
+source 'http://github.com/dpmcnevin/devise_ldap_authenticatable'
 
 gem 'rails', '3.0.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3-ruby', "1.2.5", :require => 'sqlite3'
+gem "devise", "1.1.rc2"
+gem "devise_ldap_authenticatable"
+
+#, :git => "https://github.com/dpmcnevin/devise_ldap_authenticatable.git", :branch => "rails3"
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -1,4 +1,4 @@
-1312387543
+1312470414
 Application	/home/rails/Rails/depot/bsecompetencias/config/application.rb	  class Application 
 ApplicationController	/home/rails/Rails/depot/bsecompetencias/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/rails/Rails/depot/bsecompetencias/app/helpers/application_helper.rb	module ApplicationHelper
@@ -6,6 +6,7 @@ BrowsingTest	/home/rails/Rails/depot/bsecompetencias/test/performance/browsing_t
 Bsecompetencias	/home/rails/Rails/depot/bsecompetencias/config/application.rb	module Bsecompetencias
 CreateLevels	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802203223_create_levels.rb	class CreateLevels 
 CreateSkillTypes	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802202723_create_skill_types.rb	class CreateSkillTypes 
+DeviseCreateUsers	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110804141854_devise_create_users.rb	class DeviseCreateUsers 
 Level	/home/rails/Rails/depot/bsecompetencias/app/models/level.rb	class Level 
 LevelTest	/home/rails/Rails/depot/bsecompetencias/test/unit/level_test.rb	class LevelTest 
 LevelsController	/home/rails/Rails/depot/bsecompetencias/app/controllers/levels_controller.rb	class LevelsController 
@@ -21,6 +22,8 @@ SkillTypesHelperTest	/home/rails/Rails/depot/bsecompetencias/test/unit/helpers/s
 Str	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototype.js	function Str(key, holder, stack)
 TestCase	/home/rails/Rails/depot/bsecompetencias/test/test_helper.rb	class ActiveSupport::TestCase
 Type	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototype.js	function Type(o)
+User	/home/rails/Rails/depot/bsecompetencias/app/models/user.rb	class User 
+UserTest	/home/rails/Rails/depot/bsecompetencias/test/unit/user_test.rb	class UserTest 
 abs	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototype.js	function abs()
 absolutize	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototype.js	function absolutize(element)
 addMethods	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototype.js	function addMethods(source)
@@ -63,6 +66,7 @@ dirNodeCheck	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototyp
 dispatch	/home/rails/Rails/depot/bsecompetencias/public/javascripts/effects.js	function dispatch(effect, eventName)
 down	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802202723_create_skill_types.rb	  def self.down
 down	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802203223_create_levels.rb	  def self.down
+down	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110804141854_devise_create_users.rb	  def self.down
 each	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototype.js	function each(iterator)
 each	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototype.js	function each(iterator, context)
 eachSlice	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototype.js	function eachSlice(number, iterator, context)
@@ -215,6 +219,7 @@ uniq	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototype.js	fun
 unset	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototype.js	function unset(key)
 up	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802202723_create_skill_types.rb	  def self.up
 up	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110802203223_create_levels.rb	  def self.up
+up	/home/rails/Rails/depot/bsecompetencias/db/migrate/20110804141854_devise_create_users.rb	  def self.up
 update	/home/rails/Rails/depot/bsecompetencias/app/controllers/levels_controller.rb	  def update
 update	/home/rails/Rails/depot/bsecompetencias/app/controllers/skill_types_controller.rb	  def update
 update	/home/rails/Rails/depot/bsecompetencias/public/javascripts/prototype.js	function update(array, args)
