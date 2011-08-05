@@ -1,4 +1,6 @@
 class SkillTypesController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /skill_types
   # GET /skill_types.xml
   def index

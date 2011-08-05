@@ -1,4 +1,5 @@
 class LevelsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /levels
   # GET /levels.xml
   def index

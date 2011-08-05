@@ -1,9 +1,12 @@
 Bsecompetencias::Application.routes.draw do
+
   devise_for :users
 
   resources :levels
 
   resources :skill_types
+
+  root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

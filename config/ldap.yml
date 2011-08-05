@@ -21,7 +21,8 @@ development:
   host: dell01
   port: 389
   attribute: cn
-  base: ou=corredores,dc=bse,dc=com,dc=uy
+#  base: ou=corredores,dc=bse,dc=com,dc=uy
+  base: ou=Corredores,dc=bse,dc=com,dc=uy
   admin_user: cn=corr90000,dc=bse,dc=com,dc=uy
   admin_password: sullivan
   ssl: false
