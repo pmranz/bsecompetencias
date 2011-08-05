@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nroDocumento: 1
+  nombre: MyString
+  apellido: MyString
+
+two:
+  nroDocumento: 1
+  nombre: MyString
+  apellido: MyString

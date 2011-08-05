@@ -1,6 +1,7 @@
 Bsecompetencias::Application.routes.draw do
 
   resources :skills
+  resources :employees
 
   devise_for :users
 
