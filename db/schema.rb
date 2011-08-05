@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110805032345) do
+ActiveRecord::Schema.define(:version => 20110805071155) do
 
   create_table "levels", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(:version => 20110805032345) do
 
   create_table "skill_types", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skills", :force => true do |t|
+    t.text     "name"
+    t.text     "description"
+    t.integer  "skill_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
