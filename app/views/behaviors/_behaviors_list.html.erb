@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <th>Level</th>
+    <th>Required behavior</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% behaviors.each do |behavior| %>
+<%= behavior_path(behavior) %>
+<tr>
+    <td><%= behavior.level_id %></td>
+    <td><%= behavior.required_behavior %></td>
+    <td><%= link_to 'Show', behavior %></td>
+
+    <td><%= link_to 'Destroy', behavior, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate behaviors %>

@@ -32,8 +32,12 @@
   <br/>
   
   <h2>Tags</h2>
-  <%= render :partial => 'behaviors/form',
-             :locals => {:form => f} %>
+
+
+  <%= render :partial => 'behaviors/behaviors_list',
+             :locals => {:behaviors => @skill.behaviors} %>
+            
+  <% @behavior = Behavior.new %>
             
 
   <div class="actions">

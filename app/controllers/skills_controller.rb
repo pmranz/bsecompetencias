@@ -1,10 +1,12 @@
 class SkillsController < ApplicationController
+  before_filter :load_types
+  
   # GET /skills
   # GET /skills.xml
   
   
   def index
-    @thetypes = SkillType.all
+   
     @skills = Skill.paginate :page => params[:page], :per_page => 10
 
     respond_to do |format|
@@ -16,7 +18,7 @@ class SkillsController < ApplicationController
   # GET /skills/1
   # GET /skills/1.xml
   def show
-    @thetypes = SkillType.all
+
     @skill = Skill.find(params[:id])
 
     respond_to do |format|
@@ -28,7 +30,7 @@ class SkillsController < ApplicationController
   # GET /skills/new
   # GET /skills/new.xml
   def new
-    @thetypes = SkillType.all
+
     @skill = Skill.new
 
     respond_to do |format|
@@ -39,14 +41,14 @@ class SkillsController < ApplicationController
 
   # GET /skills/1/edit
   def edit
-    @thetypes = SkillType.all
+
     @skill = Skill.find(params[:id])
   end
 
   # POST /skills
   # POST /skills.xml
   def create
-    @thetypes = SkillType.all
+  
     @skill = Skill.new(params[:skill])
 
     respond_to do |format|
@@ -63,7 +65,7 @@ class SkillsController < ApplicationController
   # PUT /skills/1
   # PUT /skills/1.xml
   def update
-    @thetypes = SkillType.all
+
     @skill = Skill.find(params[:id])
 #    @skill.skill_type_id = params[:skill_type_id]
 
@@ -88,5 +90,11 @@ class SkillsController < ApplicationController
       format.html { redirect_to(skills_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  private
+  
+  def load_types
+    @thetypes = SkillType.all
   end
 end
