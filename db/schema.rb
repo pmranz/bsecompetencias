@@ -10,8 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20110810123851) do
+ActiveRecord::Schema.define(:version => 20110811155626) do
 
   create_table "behaviors", :force => true do |t|
     t.integer  "skill_id"
@@ -20,9 +19,6 @@ ActiveRecord::Schema.define(:version => 20110810123851) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-=======
-ActiveRecord::Schema.define(:version => 20110811155626) do
->>>>>>> 5db1385208967b7c48f4bdb744ad326d92050587
 
   create_table "departments", :force => true do |t|
     t.string   "name"
