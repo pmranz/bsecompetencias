@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class SkillTypesControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
+    @user = users(:one)
+    sign_in @user
     @skill_type = skill_types(:one)
   end
 

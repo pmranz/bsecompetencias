@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class JobTitlesControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
+    @user = users(:one)
+    sign_in @user
     @job_title = job_titles(:one)
   end
 

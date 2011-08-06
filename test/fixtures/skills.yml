@@ -3,9 +3,9 @@
 one:
   name: MyText
   description: MyText
-  type: 1
+  skill_type_id: 1
 
 two:
   name: MyText
   description: MyText
-  type: 1
+  skill_type_id: 1
