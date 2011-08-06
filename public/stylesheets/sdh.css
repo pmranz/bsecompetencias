@@ -11,4 +11,4 @@ hr {color: #cccccc;height: 1px;}
 
 #divsis {vertical-align: 75%;}
 
-#frm_login {width: 350px;border: 1px solid;margin-top: 75px;margin-left: auto;margin-right: auto;}
+#contenedor_frm_login {width: 350px;height: 351px;/*border: 1px solid;*/margin-top: 25px;margin-left: auto;margin-right: auto;background-image: url(/images/fondo_login.png);}#mens_login {border: 0px solid;height: 40px;padding-top: 1px;}#frm_login {margin-top: 95px;/*border: 1px solid;*/}
