@@ -1,0 +1,27 @@
+<h1>Listing workers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Last name</th>
+    <th>Document</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @workers.each do |worker| %>
+  <tr>
+    <td><%= worker.name %></td>
+    <td><%= worker.last_name %></td>
+    <td><%= worker.document %></td>
+    <td><%= link_to 'Show', worker %></td>
+    <td><%= link_to 'Edit', edit_worker_path(worker) %></td>
+    <td><%= link_to 'Destroy', worker, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @workers %> 
+<br />
+
+<%= link_to 'New Worker', new_worker_path %>

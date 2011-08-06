@@ -2,7 +2,7 @@ class DivisionsController < ApplicationController
   # GET /divisions
   # GET /divisions.xml
   def index
-    @divisions = Division.all
+    @divisions = Division.paginate :page => params[:page], :per_page => 10
 
     respond_to do |format|
       format.html # index.html.erb

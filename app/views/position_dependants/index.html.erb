@@ -16,9 +16,10 @@
     <td><%= link_to 'Show', position_dependant %></td>
     <td><%= link_to 'Edit', edit_position_dependant_path(position_dependant) %></td>
     <td><%= link_to 'Destroy', position_dependant, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  </tr> 
+<% end %>  
 </table>
+<%= will_paginate @position_dependants %>  
 
 <br />
 

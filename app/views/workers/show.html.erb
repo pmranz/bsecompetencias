@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @worker.name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @worker.last_name %>
+</p>
+
+<p>
+  <b>Document:</b>
+  <%= @worker.document %>
+</p>
+
+
+<%= link_to 'Edit', edit_worker_path(@worker) %> |
+<%= link_to 'Back', workers_path %>

@@ -19,8 +19,9 @@
     <td><%= link_to 'Edit', edit_division_path(division) %></td>
     <td><%= link_to 'Destroy', division, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
-<% end %>
+<% end %>     
 </table>
+<%= will_paginate @divisions %>
 
 <br />
 

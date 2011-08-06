@@ -1,24 +1,25 @@
-<h1>Listing skill_types</h1>
+<h1>Tipos de Competencias</h1>
 
 <table class="tab_listados" id="tab_skill_types">
   <tr>
-    <th>Name</th>
+    <th>Nombre</th>
+    <!--
+    <th></th>
+    -->
     <th></th>
     <th></th>
-    <th></th>
+    <td><%= link_to image_tag("page_new.gif"), new_skill_type_path %></td>
   </tr>
 
 <% @skill_types.each do |skill_type| %>
   <tr>
-    <td class="col_bi"><%= skill_type.name %></td>
+    <td class="col_bd"><%= skill_type.name %></td>
+    <!--
     <td><%= link_to 'Show', skill_type %></td>
-    <td><%= link_to 'Edit', edit_skill_type_path(skill_type) %></td>
-    <td><%= link_to 'Destroy', skill_type, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    -->
+    <td><%= link_to image_tag("page_edit.png"), edit_skill_type_path(skill_type) %></td>
+    <td><%= link_to image_tag("page_delete.gif"), skill_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>    
 <% end %>
+<%= will_paginate @skill_types %> 
 </table>
-
-<br />
-
-<%= link_to 'New Skill type', new_skill_type_path %>
-<%= link_to 'Back to Menu', root_path %>

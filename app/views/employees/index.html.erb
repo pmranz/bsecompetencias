@@ -1,13 +1,16 @@
-<h1>Listing employees</h1>
+<h1>Funcionarios</h1>
 
 <table class="tab_listados" id="tab_employees">
   <tr>
     <th>Nrodocumento</th>
     <th>Nombre</th>
     <th>Apellido</th>
+    <!--
+    <th></th>
+    -->
     <th></th>
     <th></th>
-    <th></th>
+    <td><%= link_to image_tag("page_new.gif"), new_employee_path %></td>
   </tr>
 
 <% @employees.each do |employee| %>
@@ -15,13 +18,12 @@
     <td><%= employee.nroDocumento %></td>
     <td><%= employee.nombre %></td>
     <td><%= employee.apellido %></td>
+    <!--
     <td><%= link_to 'Show', employee %></td>
-    <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-    <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    -->
+    <td><%= link_to image_tag("page_edit.png"), edit_employee_path(employee) %></td>
+    <td><%= link_to image_tag("page_delete.gif"), employee, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>  
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Employee', new_employee_path %>
+<%= will_paginate @employees %> 
