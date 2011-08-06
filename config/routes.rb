@@ -1,10 +1,8 @@
 Bsecompetencias::Application.routes.draw do
 
-<<<<<<< HEAD
   resources :behaviors
-=======
+
   resources :position_dependants
->>>>>>> 5db1385208967b7c48f4bdb744ad326d92050587
 
   resources :departments
 
