@@ -1,4 +1,9 @@
+
+<% @skill.behaviors.build %>
+
 <%= form_for(@skill) do |f| %>
+
+
   <% if @skill.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@skill.errors.count, "error") %> prohibited this skill from being saved:</h2>
@@ -19,13 +24,18 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
-  
-  
   <div class="field">
     <%= f.label :skill_type_id %><br />
     <%= f.select :skill_type_id, @thetypes.collect {|c| [ c.name, c.id ] } %>
   </div>
   
+  <br/>
+  
+  <h2>Tags</h2>
+  <%= render :partial => 'behaviors/form',
+             :locals => {:form => f} %>
+            
+
   <div class="actions">
     <%= f.submit %>
   </div>

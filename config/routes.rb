@@ -1,5 +1,7 @@
 Bsecompetencias::Application.routes.draw do
 
+  resources :behaviors
+
   resources :departments
 
   resources :divisions

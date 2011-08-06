@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Skill:</b>
+  <%= @behavior.skill_id %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @behavior.level_id %>
+</p>
+
+<p>
+  <b>Required behavior:</b>
+  <%= @behavior.required_behavior %>
+</p>
+
+
+<%= link_to 'Edit', edit_behavior_path(@behavior) %> |
+<%= link_to 'Back', behaviors_path %>
