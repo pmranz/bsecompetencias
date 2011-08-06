@@ -1,6 +1,10 @@
 Bsecompetencias::Application.routes.draw do
 
+<<<<<<< HEAD
   resources :behaviors
+=======
+  resources :position_dependants
+>>>>>>> 5db1385208967b7c48f4bdb744ad326d92050587
 
   resources :departments
 
@@ -11,16 +15,16 @@ Bsecompetencias::Application.routes.draw do
   resources :employees
 
   devise_for :users
-
+  
   resources :levels
 
   resources :skill_types
   
-  resources :position
+  resources :positions
   
-  resources :worker
+  resources :workers
   
-  resources :job_title
+  resources :job_titles
 
   root :to => 'home#index'
 

@@ -10,6 +10,7 @@ gem 'rails', '3.0.5'
 gem 'sqlite3-ruby', "1.2.5", :require => 'sqlite3'
 gem "devise", "1.1.rc2"
 gem "devise_ldap_authenticatable"
+gem 'declarative_authorization'
 
 #, :git => "https://github.com/dpmcnevin/devise_ldap_authenticatable.git", :branch => "rails3"
 
@@ -22,8 +23,6 @@ gem "devise_ldap_authenticatable"
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
 # gem 'ruby-debug19', :require => 'ruby-debug'
-
-gem 'declarative_authorization'
 
 # Bundle the extra gems:
 # gem 'bj'
