@@ -1,15 +1,6 @@
 # Use this hook to configure devise mailer, warden hooks and so forth. The first
 # four configuration values can also be set straight in your models.
 Devise.setup do |config|
-  # ==> LDAP Configuration 
-  # config.ldap_logger = true
-  config.ldap_create_user = true
-  # config.ldap_update_password = true
-  # config.ldap_config = "#{Rails.root}/config/ldap.yml"
-  # config.ldap_check_group_membership = false
-  # config.ldap_check_attributes = false
-  # config.ldap_use_admin_to_bind = false
-  
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in DeviseMailer.
   config.mailer_sender = "please-change-me@config-initializers-devise.com"
@@ -48,10 +39,11 @@ Devise.setup do |config|
   # from others authentication tools as :clearance_sha1, :authlogic_sha512 (then
   # you should set stretches above to 20 for default behavior) and :restful_authentication_sha1
   # (then you should set stretches to 10, and copy REST_AUTH_SITE_KEY to pepper)
-  config.encryptor = :bcrypt
+#  config.encryptor = :bcrypt
+  config.encryptor = :sha1
 
   # Setup a pepper to generate the encrypted password.
-  config.pepper = "ce52e2d4aaf05b175c321a24cdbcbf1257a38cd84f3409f9989637eea253499129940f07f0c8ad8ff37923dd466cb41db4ee54afd56f9d45861d0286458b9593"
+  config.pepper = "f90f464dcedfe67cb975cb0ead17d3f7c7170eebeaab159b367938000770c54dab178e9488e6756c2ba8f55605d743661611f5fe46ba5141a2e5915ca8a78404"
 
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
