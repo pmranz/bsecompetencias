@@ -38,10 +38,10 @@ gem 'declarative_authorization'
 #   gem 'webrat'
 # end
 
-group :ci do
-  gem 'ci_reporter', :git => 'git://github.com/grilix/ci_reporter.git'
-  gem 'test-unit'
-  gem 'rcov'
-  gem 'metric_fu' 
-  gem 'rails_code_qa'
-end
+#group :ci do
+  #gem 'ci_reporter', :git => 'https://github.com/grilix/ci_reporter.git'
+  #gem 'test-unit'
+  #gem 'rcov'
+  #gem 'metric_fu' 
+  #gem 'rails_code_qa'
+#end
