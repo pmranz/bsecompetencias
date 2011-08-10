@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bsecompetencias</title>
+  <title>Sistema de Desarrollo Humano - Evaluación por Competencias</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <img src="/images/logo_sdh.png">
+  <hr>
+  
+  <div id="cuerpo">
 
-
-
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
 <%= yield %>
 
+  </div>
+  <hr>
+  <div id="pie">
+    Pie de página
+  </div>
 </body>
 </html>
