@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  department_id: 
+  job_title_id: 
+  worker_id: 
+
+two:
+  department_id: 
+  job_title_id: 
+  worker_id: 

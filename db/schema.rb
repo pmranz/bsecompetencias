@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110805071155) do
+ActiveRecord::Schema.define(:version => 20110810123850) do
 
   create_table "employees", :force => true do |t|
     t.integer  "nroDocumento"
@@ -20,8 +20,22 @@ ActiveRecord::Schema.define(:version => 20110805071155) do
     t.datetime "updated_at"
   end
 
+  create_table "job_titles", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "levels", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "positions", :force => true do |t|
+    t.integer  "department_id"
+    t.integer  "job_title_id"
+    t.integer  "worker_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,5 +1,9 @@
 Bsecompetencias::Application.routes.draw do
 
+  resources :positions
+
+  resources :job_titles
+
   resources :skills
   resources :employees
 
