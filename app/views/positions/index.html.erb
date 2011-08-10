@@ -1,0 +1,27 @@
+<h1>Listing positions</h1>
+
+<table>
+  <tr>
+    <th>Department</th>
+    <th>Job title</th>
+    <th>Worker</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @positions.each do |position| %>
+  <tr>
+    <td><%= position.department_id %></td>
+    <td><%= position.job_title_id %></td>
+    <td><%= position.worker_id %></td>
+    <td><%= link_to 'Show', position %></td>
+    <td><%= link_to 'Edit', edit_position_path(position) %></td>
+    <td><%= link_to 'Destroy', position, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Position', new_position_path %>

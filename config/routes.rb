@@ -3,7 +3,9 @@ Bsecompetencias::Application.routes.draw do
   resources :departments
 
   resources :divisions
+  
   resources :skills
+  
   resources :employees
 
   devise_for :users
@@ -11,6 +13,12 @@ Bsecompetencias::Application.routes.draw do
   resources :levels
 
   resources :skill_types
+  
+  resources :position
+  
+  resources :worker
+  
+  resources :job_title
 
   root :to => 'home#index'
 
