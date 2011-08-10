@@ -10,6 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20110809030252) do
 
   create_table "departments", :force => true do |t|
@@ -23,6 +24,14 @@ ActiveRecord::Schema.define(:version => 20110809030252) do
   create_table "divisions", :force => true do |t|
     t.string   "name"
     t.string   "description"
+=======
+ActiveRecord::Schema.define(:version => 20110805071155) do
+
+  create_table "employees", :force => true do |t|
+    t.integer  "nroDocumento"
+    t.string   "nombre"
+    t.string   "apellido"
+>>>>>>> dc40cdbd7a8ef5d8c3f1362ee201da880bc1ee9b
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,6 +44,14 @@ ActiveRecord::Schema.define(:version => 20110809030252) do
 
   create_table "skill_types", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skills", :force => true do |t|
+    t.text     "name"
+    t.text     "description"
+    t.integer  "skill_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
