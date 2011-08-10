@@ -1,13 +1,10 @@
 Bsecompetencias::Application.routes.draw do
 
-<<<<<<< HEAD
   resources :departments
 
   resources :divisions
-=======
   resources :skills
   resources :employees
->>>>>>> dc40cdbd7a8ef5d8c3f1362ee201da880bc1ee9b
 
   devise_for :users
 
