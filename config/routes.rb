@@ -1,5 +1,9 @@
 Bsecompetencias::Application.routes.draw do
 
+  resources :departments
+
+  resources :divisions
+
   devise_for :users
 
   resources :levels
