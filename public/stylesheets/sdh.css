@@ -2,4 +2,13 @@ body {background-color: #ffffff;font-family: Arial, "Times New Roman";font-si
 
 hr {color: #cccccc;height: 1px;}
 
-#cuerpo {height: 450px;}
+#cuerpo {height: 450px;
+/*border: 1px solid;*/text-align: center;}
+
+#pie_izq {float: left;}
+
+#pie_der {float: right;}
+
+#divsis {vertical-align: 75%;}
+
+#frm_login {width: 350px;border: 1px solid;margin-top: 75px;margin-left: auto;margin-right: auto;}
