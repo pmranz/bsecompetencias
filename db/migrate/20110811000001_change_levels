@@ -1,0 +1,11 @@
+class ChangeLevels < ActiveRecord::Migration
+  def self.up
+    change_table :levels do |t|
+      t.add_column skill_id integer 
+    end
+  end
+
+  def self.down
+    drop_column skill_id  
+  end
+end
