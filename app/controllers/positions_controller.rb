@@ -1,4 +1,5 @@
 class PositionsController < ApplicationController
+
   # GET /positions
   # GET /positions.xml
   def index

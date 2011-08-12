@@ -1,0 +1,25 @@
+<%= form_for(@position_dependant) do |f| %>
+  <% if @position_dependant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@position_dependant.errors.count, "error") %> prohibited this position_dependant from being saved:</h2>
+
+      <ul>
+      <% @position_dependant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :position_id %><br />
+    <%= f.text_field :position_id %>
+  </div>
+  <div class="field">
+    <%= f.label :dependent_id %><br />
+    <%= f.text_field :dependent_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
