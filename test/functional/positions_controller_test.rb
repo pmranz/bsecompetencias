@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class PositionsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
+    @user = users(:one)
+    sign_in @user
     @position = positions(:one)
   end
 
