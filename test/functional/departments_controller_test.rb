@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class DepartmentsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
+    @user = users(:one)
+    sign_in @user
     @department = departments(:one)
   end
 
