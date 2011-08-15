@@ -1,22 +1,19 @@
-Bienvenido a BSE Evaluación de Desempeño
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
 <% if user_signed_in? %>
-   <%= link_to 'Sign out', destroy_user_session_path if user_signed_in? %>
-<br />
-<%= link_to 'Levels', levels_path %>
-<br />
-<%= link_to 'Skill Types', skill_types_path %>
-<br />
-<%= link_to 'Skills', skills_path %>
-<br />
-<% else %>
-<%= link_to 'Sign in', new_user_session_path unless user_signed_in? %>
+  Bienvenido a BSE Evaluación de Desempeño
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <%= link_to 'Levels', levels_path %>
+  <br />
+  <%= link_to 'Skill Types', skill_types_path %>
+  <br />
+  <%= link_to 'Skills', skills_path %>
+  <br />
+
 <% end %>

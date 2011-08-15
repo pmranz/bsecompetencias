@@ -1,6 +1,6 @@
 <h1>Listing skill_types</h1>
 
-<table>
+<table class="tab_listados" id="tab_skill_types">
   <tr>
     <th>Name</th>
     <th></th>
@@ -10,7 +10,7 @@
 
 <% @skill_types.each do |skill_type| %>
   <tr>
-    <td><%= skill_type.name %></td>
+    <td class="col_bi"><%= skill_type.name %></td>
     <td><%= link_to 'Show', skill_type %></td>
     <td><%= link_to 'Edit', edit_skill_type_path(skill_type) %></td>
     <td><%= link_to 'Destroy', skill_type, :confirm => 'Are you sure?', :method => :delete %></td>

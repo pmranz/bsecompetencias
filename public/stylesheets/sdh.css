@@ -5,10 +5,13 @@ hr {color: #cccccc;height: 1px;}
 #cuerpo {height: 450px;
 /*border: 1px solid;*/text-align: center;}
 
-#pie_izq {float: left;}
+#pie_izq {float: left;/*border: 1px solid;*/}
 
-#pie_der {float: right;}
+#pie_der {float: right;/*border: 1px solid;*/}
 
 #divsis {vertical-align: 75%;}
 
-#contenedor_frm_login {width: 350px;height: 351px;/*border: 1px solid;*/margin-top: 25px;margin-left: auto;margin-right: auto;background-image: url(/images/fondo_login.png);}#mens_login {border: 0px solid;height: 40px;padding-top: 1px;}#frm_login {margin-top: 95px;/*border: 1px solid;*/}
+#contenedor_frm_login {width: 350px;height: 351px;/*border: 1px solid;*/margin-top: 25px;margin-left: auto;margin-right: auto;background-image: url(/images/fondo_login.png);}#mens_login {/*border: 1px solid;*/height: 40px;padding-top: 1px;}#frm_login {margin-top: 95px;/*border: 1px solid;*/}#cabecera {height: 100px;/*border: 1px solid;*/}#cab_izq {float: left;/*border: 1px solid;*/}
+
+#cab_der {float: right;/*border: 1px solid;*/margin-top: 80px;}
+.tab_listados {border: 1px solid;padding: 10px;margin-left: auto;margin-right: auto;}.col_bd {/*border-right: 1px solid;*/padding-right: 10px;margin-right: 10px;}

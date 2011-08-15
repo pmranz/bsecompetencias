@@ -1,6 +1,6 @@
 <h1>Listing levels</h1>
 
-<table>
+<table class="tab_listados" id="tab_levels">
   <tr>
     <th>Name</th>
     <th></th>
@@ -10,8 +10,8 @@
 
 <% @levels.each do |level| %>
   <tr>
-    <td><%= level.name %></td>
-    <td><%= link_to 'Show', level %></td>
+    <td class="col_bd"><%= level.name %></td>
+    <td><%= link_to image_tag "pepe.jpg", {:action => :level } %></td>
     <td><%= link_to 'Edit', edit_level_path(level) %></td>
     <td><%= link_to 'Destroy', level, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
