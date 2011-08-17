@@ -12,6 +12,7 @@ gem "devise", "1.1.rc2"
 gem "devise_ldap_authenticatable"
 gem 'declarative_authorization'
 gem "simple-navigation"
+gem 'will_paginate'
 #, :git => "https://github.com/dpmcnevin/devise_ldap_authenticatable.git", :branch => "rails3"
 
 # Use unicorn as the web server

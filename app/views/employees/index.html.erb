@@ -23,6 +23,7 @@
     -->
     <td><%= link_to image_tag("page_edit.png"), edit_employee_path(employee) %></td>
     <td><%= link_to image_tag("page_delete.gif"), employee, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  </tr>  
 <% end %>
 </table>
+<%= will_paginate @employees %> 

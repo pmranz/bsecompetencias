@@ -2,7 +2,7 @@ class BehaviorsController < ApplicationController
   # GET /behaviors
   # GET /behaviors.xml
   def index
-    @behaviors = Behavior.all
+    @behaviors = Behavior.paginate :page => params[:page], :per_page => 10
 
     respond_to do |format|
       format.html # index.html.erb

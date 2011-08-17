@@ -24,7 +24,7 @@
   <div id="cuerpo">
     <div id="menu_adm">
       <% if user_signed_in? %>
-        Administración: <%= link_to 'Levels', levels_path %> | <%= link_to 'Skill Types', skill_types_path %> | <%= link_to 'Skills', skills_path %> | <%= link_to 'Employees', employees_path %>
+        Administración: <%= link_to_unless_current 'Levels', levels_path %> | <%= link_to_unless_current 'Skill Types', skill_types_path %> | <%= link_to 'Skills', skills_path %> | <%= link_to 'Employees', employees_path %>
       <% end %>
     </div>
 

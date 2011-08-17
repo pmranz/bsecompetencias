@@ -10,8 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20110810123851) do
+ActiveRecord::Schema.define(:version => 20110817161553) do
 
   create_table "behaviors", :force => true do |t|
     t.integer  "skill_id"
@@ -20,9 +19,6 @@ ActiveRecord::Schema.define(:version => 20110810123851) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-=======
-ActiveRecord::Schema.define(:version => 20110811155626) do
->>>>>>> 5db1385208967b7c48f4bdb744ad326d92050587
 
   create_table "departments", :force => true do |t|
     t.string   "name"
@@ -106,5 +102,13 @@ ActiveRecord::Schema.define(:version => 20110811155626) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "workers", :force => true do |t|
+    t.string   "name"
+    t.string   "last_name"
+    t.string   "document"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

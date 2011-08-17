@@ -4,7 +4,7 @@ class SkillTypesController < ApplicationController
   # GET /skill_types
   # GET /skill_types.xml
   def index
-    @skill_types = SkillType.all
+    @skill_types = SkillType.paginate :page => params[:page], :per_page => 10
 
     respond_to do |format|
       format.html # index.html.erb
