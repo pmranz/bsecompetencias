@@ -1,24 +1,29 @@
-<h1>Listing levels</h1>
+<h1>Niveles definidos</h1>
 
 <table class="tab_listados" id="tab_levels">
   <tr>
-    <th>Name</th>
+    <th>Nombre</th>
+    <!--
+    <th></th>
+    -->
     <th></th>
     <th></th>
-    <th></th>
+    <td><%= link_to image_tag("page_new.gif"), new_level_path %></td>
   </tr>
 
 <% @levels.each do |level| %>
   <tr>
     <td class="col_bd"><%= level.name %></td>
-    <td><%= link_to image_tag "pepe.jpg", {:action => :level } %></td>
-    <td><%= link_to 'Edit', edit_level_path(level) %></td>
-    <td><%= link_to 'Destroy', level, :confirm => 'Are you sure?', :method => :delete %></td>
+    <!-- Elimino show en este caso
+    <td><%= link_to image_tag "page_edit.png", {:action => :level } %></td>
+    -->
+    <td><%= link_to image_tag("page_edit.png"), edit_level_path(level) %></td>
+    <td><%= link_to image_tag("page_delete.gif"), level, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Level', new_level_path %>
+
 <%= link_to 'Back to Menu', root_path %>
