@@ -70,6 +70,8 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.9.2)
+    simple-navigation (3.5.0)
+      activesupport (>= 2.3.2)
     sqlite3-ruby (1.2.5)
     thor (0.14.6)
     treetop (1.4.9)
@@ -86,4 +88,5 @@ DEPENDENCIES
   devise (= 1.1.rc2)
   devise_ldap_authenticatable
   rails (= 3.0.5)
+  simple-navigation
   sqlite3-ruby (= 1.2.5)
