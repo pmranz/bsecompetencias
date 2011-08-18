@@ -2,7 +2,6 @@
 
 <table class="tab_listados" class="tab_divisions">
   <tr>
-    <th>Id</th>
     <th>Name</th>
     <th>Description</th>
     <th></th>
@@ -12,7 +11,6 @@
 
 <% @divisions.each do |division| %>
   <tr>
-    <td><%= division.id %></td>
     <td><%= division.name %></td>
     <td><%= division.description %></td>
     <td><%= link_to 'Show', division %></td>
