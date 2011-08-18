@@ -7,15 +7,14 @@
     <th></th>
   </tr>
 
-<% behaviors.each do |behavior| %>
-<%= behavior_path(behavior) %>
-<tr>
-    <td><%= behavior.level_id %></td>
-    <td><%= behavior.required_behavior %></td>
-    <td><%= link_to 'Show', behavior %></td>
 
-    <td><%= link_to 'Destroy', behavior, :confirm => 'Are you sure?', :method => :delete %></td>
+<% behaviors.each do |b| %>
+<tr>
+    <td><%= b.level_id %></td>
+    <td><%= b.required_behavior %></td>
+    <td><%= link_to 'Show', b %></td>
+    <td><%= link_to 'Edit', edit_behavior_path(b) %></td>
+    <td><%= link_to 'Destroy', b, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-<%= will_paginate behaviors %>

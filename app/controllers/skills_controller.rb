@@ -43,6 +43,7 @@ class SkillsController < ApplicationController
   def edit
 
     @skill = Skill.find(params[:id])
+    @behavior = Behavior.new
   end
 
   # POST /skills

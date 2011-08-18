@@ -1,6 +1,3 @@
-
-<% @skill.behaviors.build %>
-
 <%= form_for(@skill) do |f| %>
 
 
@@ -31,14 +28,10 @@
   
   <br/>
   
-  <h2>Tags</h2>
-
-
-  <%= render :partial => 'behaviors/behaviors_list',
-             :locals => {:behaviors => @skill.behaviors} %>
+  <h2>Behaviors</h2>
+  <%= render :partial => 'behaviors/behaviors_list',:locals => {:behaviors => @skill.behaviors} %>
             
-  <% @behavior = Behavior.new %>
-            
+  <% render :partial => "behaviors/form" %>
 
   <div class="actions">
     <%= f.submit %>
