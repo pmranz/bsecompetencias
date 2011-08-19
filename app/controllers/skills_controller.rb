@@ -1,5 +1,5 @@
 class SkillsController < ApplicationController
-  before_filter :load_types
+#  before_filter :load_types
   
   # GET /skills
   # GET /skills.xml
@@ -93,9 +93,8 @@ class SkillsController < ApplicationController
     end
   end
   
-  private
-  
-  def load_types
-    @thetypes = SkillType.all
-  end
+#  private
+#  def load_types
+#    @thetypes = SkillType.all
+#  end
 end
