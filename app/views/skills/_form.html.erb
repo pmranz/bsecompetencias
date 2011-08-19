@@ -23,15 +23,15 @@
   </div>
   <div class="field">
     <%= f.label :skill_type_id %><br />
-    <%= f.select :skill_type_id, @thetypes.collect {|c| [ c.name, c.id ] } %>
+    <%= f.collection_select(:skill_type_id, SkillType.find(:all), :id, :name, {:prompt => 'Selecciona un Tipo de Competencia' }) %>
   </div>
   
   <br/>
   
   <h2>Behaviors</h2>
   <%= render :partial => 'behaviors/behaviors_list',:locals => {:behaviors => @skill.behaviors} %>
-            
-  <% render :partial => "behaviors/form" %>
+
+  <!-- render :partial => "behaviors/form" -->
 
   <div class="actions">
     <%= f.submit %>
