@@ -15,7 +15,7 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_area :name %>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
@@ -27,12 +27,15 @@
   </div>
   
   <br/>
-  
+
   <div class="actions">
     <%= f.submit %>
   </div>
 
   <h2>Behaviors</h2>
+  
+<%= link_to 'New Behavior', new_behavior_path, :skill_id => @skill.id %>
+
   <%= render :partial => 'behaviors/behaviors_list',:locals => {:behaviors => @skill.behaviors, :skill_id => @skill.id } %>
 
 <% end %>

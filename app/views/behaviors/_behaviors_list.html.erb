@@ -6,17 +6,6 @@
     <th></th>
   </tr>
 
-<tr>
-<%= link_to 'New Behavior', new_behavior_path, :skill_id => @skill.id %>
-</tr>
-
-<br/>
-<tr>probando</tr>
-<br/>
-<tr><%= @skill.id %></tr>
-<br/>
-<tr>probando</tr>
-
 <% behaviors.each do |b| %>
   <tr>
     <td><%= b.level_id %></td>

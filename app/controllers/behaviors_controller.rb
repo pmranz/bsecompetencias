@@ -25,7 +25,7 @@ class BehaviorsController < ApplicationController
   # GET /behaviors/new.xml
   def new
     @behavior = Behavior.new
-    #@behavior.skill_id = @skill.id
+#    @behavior.skill_id = Skill.find(params[:id])
 
     respond_to do |format|
       format.html # new.html.erb
