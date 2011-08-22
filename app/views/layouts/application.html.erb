@@ -28,14 +28,9 @@
       <% if user_signed_in? %>
         Administración: <%= link_to_unless_current 'Niveles', levels_path %> | <%= link_to_unless_current 'Tipos de Competencia', skill_types_path %> | <%= link_to_unless_current 'Competencias', skills_path %> | 
         <%= link_to_unless_current 'Divisiones', divisions_path %> | <%= link_to_unless_current 'Departamentos', departments_path %> | <%= link_to_unless_current 'Funcionarios', workers_path %> |
-        <%= link_to_unless_current 'Cargos', job_titles_path %> | <%= link_to_unless_current 'Cargos', positions_path %>
+        <%= link_to_unless_current 'Cargos', job_titles_path %> | <%= link_to_unless_current 'Puestos', positions_path %>
       <% end %>
     </div>
-
-  <!--
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  -->
 
 <%= yield %>
 
