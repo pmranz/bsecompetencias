@@ -12,8 +12,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %> <%= f.text_field :name %>
+  <div class="grupo_fields">
+    <div class="field">
+      <span class="label_frm"><%= f.label :name %></span> <span class="text_field_input"><%= f.text_field :name %></span>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %> <%= link_to 'Cancelar', levels_path %>
