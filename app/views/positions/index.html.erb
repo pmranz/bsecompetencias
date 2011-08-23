@@ -1,13 +1,16 @@
-<h1>Listing positions</h1>
+<h1>Puestos</h1>
 
 <table class="tab_listados" id="tab_positions">
   <tr>
-    <th>Department</th>
-    <th>Job title</th>
-    <th>Worker</th>
+    <th>Departamento</th>
+    <th>Cargo</th>
+    <th>Funcionario</th>
+    <!--
+    <th></th>
+    -->
     <th></th>
     <th></th>
-    <th></th>
+    <td><%= link_to image_tag("page_new.gif"), new_position_path %></td>
   </tr>
 
 <% @positions.each do |position| %>
@@ -15,14 +18,12 @@
     <td><%= position.department_id %></td>
     <td><%= position.job_title_id %></td>
     <td><%= position.worker_id %></td>
+    <!--
     <td><%= link_to 'Show', position %></td>
-    <td><%= link_to 'Edit', edit_position_path(position) %></td>
-    <td><%= link_to 'Destroy', position, :confirm => 'Are you sure?', :method => :delete %></td>
+    -->
+    <td><%= link_to image_tag("page_edit.png"), edit_position_path(position) %></td>
+    <td><%= link_to image_tag("page_delete.gif"), position, :confirm => '¿ Confirma este borrado ?', :method => :delete %></td>
   </tr>      
 <% end %>
 </table>
-<%= will_paginate @positions %> 
-
-<br />
-
-<%= link_to 'New Position', new_position_path %>
+<%= will_paginate @positions %>

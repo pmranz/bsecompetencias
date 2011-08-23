@@ -1,28 +1,27 @@
-<h1>Listing job_titles</h1>
+<h1>Cargos</h1>
 
 <table class="tab_listados" id="tab_job_titles">
   <tr>
-    <th>Name</th>
+    <th>Nombre</th>
+    <!--
+    <th></th>
+    -->
     <th></th>
     <th></th>
-    <th></th>
+    <td><%= link_to image_tag("page_new.gif"), new_job_title_path %></td>
   </tr>
 
 <% @job_titles.each do |job_title| %>
   <tr>
     <td><%= job_title.name %></td>
+    <!--
     <td><%= link_to 'Show', job_title %></td>
-    <td><%= link_to 'Edit', edit_job_title_path(job_title) %></td>
-    <td><%= link_to 'Destroy', job_title, :confirm => 'Are you sure?', :method => :delete %></td>
+    -->
+    <td><%= link_to image_tag("page_edit.png"), edit_job_title_path(job_title) %></td>
+    <td><%= link_to image_tag("page_delete.gif"), job_title, :confirm => '¿ Confirma este borrado ?', :method => :delete %></td>
   </tr>    
 <% end %>
 </table>
-<%= will_paginate @job_titles %> 
-
-<br />
-
-<%= link_to 'New Job title', new_job_title_path %>
-
-<%= link_to 'Back to Menu', root_path %>
+<%= will_paginate @job_titles %>
 
 

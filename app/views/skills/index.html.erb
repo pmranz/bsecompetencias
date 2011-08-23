@@ -1,13 +1,16 @@
-<h1>Listing skills</h1>
+<h1>Competencias</h1>
 
 <table class="tab_listados" id="tab_skills">
   <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Type</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Tipo</th>
+    <!--
+    <th></th>
+    -->
     <th></th>
     <th></th>
-    <th></th>
+    <td><%= link_to image_tag("page_new.gif"), new_skill_path %></td>
   </tr>
 
 <% @skills.each do |skill| %>
@@ -15,17 +18,12 @@
     <td><%= skill.name %></td>
     <td><%= skill.description %></td>
     <td><%= skill.skill_type_id %></td>
+    <!--
     <td><%= link_to 'Show', skill %></td>
-    <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
-    <td><%= link_to 'Destroy', skill, :confirm => 'Are you sure?', :method => :delete %></td>
+    -->
+    <td><%= link_to image_tag("page_edit.png"), edit_skill_path(skill) %></td>
+    <td><%= link_to image_tag("page_delete.gif"), skill, :confirm => '¿ Confirma este borrado ?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-<%= will_paginate @skills %>  
-
-<br />
-
-<%= link_to 'New Skill', new_skill_path %>
-<%= link_to 'Back to Menu', root_path %>
-
-
+<%= will_paginate @skills %>
