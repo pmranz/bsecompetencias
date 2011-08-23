@@ -18,7 +18,7 @@
     <td><%= link_to image_tag "page_edit.png", {:action => :level } %></td>
     -->
     <td><%= link_to image_tag("page_edit.png"), edit_level_path(level) %></td>
-    <td><%= link_to image_tag("page_delete.gif"), level, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag("page_delete.gif"), level, :confirm => '¿ Confirma este borrado ?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
