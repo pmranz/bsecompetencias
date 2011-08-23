@@ -17,7 +17,7 @@
   <tr>
     <td><%= department.name %></td>
     <td><%= department.description %></td>
-    <td><%= department.division_id %></td>
+    <td><%= Division.find(department.division_id).name %></td>
     <!--
     <td><%= link_to 'Show', department %></td>
     -->
