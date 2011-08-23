@@ -1,3 +1,4 @@
+<div class="contenedor_frm_mant" id="contenedor_frm_mant_levels">
 <%= form_for(@level) do |f| %>
   <% if @level.errors.any? %>
     <div id="error_explanation">
@@ -12,10 +13,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :name %> <%= f.text_field :name %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit %> <%= link_to 'Cancelar', levels_path %>
   </div>
 <% end %>
+</div>
