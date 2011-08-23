@@ -14,7 +14,7 @@ class BehaviorsController < ApplicationController
   # GET /behaviors/1.xml
   def show
     @behavior = Behavior.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @behavior }
@@ -25,6 +25,7 @@ class BehaviorsController < ApplicationController
   # GET /behaviors/new.xml
   def new
     @behavior = Behavior.new
+    #@behavior.skill_id = @skill.id
 
     respond_to do |format|
       format.html # new.html.erb
