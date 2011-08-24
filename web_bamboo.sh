@@ -1,5 +1,6 @@
 #! /bin/sh
 mkdir tmp
+cat GemfileCI >> Gemfile
 cp /home/ubuntu/bamboo_extra/BSE/metric_fu/ tmp/ -R
 
 rvm ruby-1.9.2@bse_taller exec bundle install
