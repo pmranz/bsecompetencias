@@ -3,18 +3,16 @@
     <th>Level</th>
     <th>Required behavior</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 
-<% behaviors.each do |b| %>
-<tr>
-    <td><%= b.level_id %></td>
-    <td><%= b.required_behavior %></td>
-    <td><%= link_to 'Show', b %></td>
-    <td><%= link_to 'Edit', edit_behavior_path(b) %></td>
-    <td><%= link_to 'Destroy', b, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+<% form.fields_for :behaviors do |f| %>
+  <% unless f.object.new_record? %>
+    <tr>
+      <td><%= f.object.level.name %></td>
+      <td><%= f.object.required_behavior %></td>
+      <td><%= link_to_remove_fields "Quitar Nivel", f %></td>
+    </tr>
+  <% end %>
+  <% end %>
 </table>

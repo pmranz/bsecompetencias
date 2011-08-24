@@ -1,4 +1,5 @@
 class BehaviorsController < ApplicationController
+
   # GET /behaviors
   # GET /behaviors.xml
   def index
@@ -80,4 +81,5 @@ class BehaviorsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 end

@@ -1,10 +1,9 @@
 class SkillsController < ApplicationController
-  before_filter :load_types
-  
+  before_filter :load_skill_types, :except => [:destroy, :update, :index]
+  before_filter :load_levels, :except => [:destroy, :update, :index]
+
   # GET /skills
   # GET /skills.xml
-  
-  
   def index
    
     @skills = Skill.paginate :page => params[:page], :per_page => 10
@@ -32,6 +31,7 @@ class SkillsController < ApplicationController
   def new
 
     @skill = Skill.new
+    @skill.behaviors.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -95,7 +95,12 @@ class SkillsController < ApplicationController
   
   private
   
-  def load_types
-    @thetypes = SkillType.all
+  def load_skill_types
+    @skill_types = SkillType.all
   end
+
+  def load_levels
+    @levels = Level.all
+  end
+
 end

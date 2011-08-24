@@ -1,5 +1,3 @@
-<%= skill_form.fields_for :behaviors do |f| %>
-
   <div class="field">
     <%= f.label :level_id %><br />
     <%= f.select :level_id, @levels.collect {|c| [ c.name, c.id ] } %>
@@ -8,4 +6,3 @@
     <%= f.label :required_behavior %><br />
     <%= f.text_area :required_behavior %>
   </div>
-<% end %>

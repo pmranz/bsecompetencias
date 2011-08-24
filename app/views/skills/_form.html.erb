@@ -1,4 +1,4 @@
-<%= form_for(@skill) do |f| %>
+<%= form_for(@skill) do |skill_form| %>
 
 
   <% if @skill.errors.any? %>
@@ -14,26 +14,31 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_area :name %>
+    <%= skill_form.label :name %><br />
+    <%= skill_form.text_area :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= skill_form.label :description %><br />
+    <%= skill_form.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :skill_type_id %><br />
-    <%= f.select :skill_type_id, @thetypes.collect {|c| [ c.name, c.id ] } %>
+    <%= skill_form.label :skill_type_id %><br />
+    <%= skill_form.select :skill_type_id, @skill_types.collect {|c| [ c.name, c.id ] } %>
   </div>
   
   <br/>
   
   <h2>Behaviors</h2>
-  <%= render :partial => 'behaviors/behaviors_list',:locals => {:behaviors => @skill.behaviors} %>
-            
-  <% render :partial => "behaviors/form" %>
+
+
+  <%= render :partial => 'behaviors/behaviors_list',:locals => { :behaviors => @skill.behaviors, :form => skill_form } %>
+
+  <%= link_to_add_fields "Agregar Nivel", skill_form, :behaviors %>
+
+  <div id="new_behaviors"></div>
+
 
   <div class="actions">
-    <%= f.submit %>
+    <%= skill_form.submit %>
   </div>
 <% end %>
