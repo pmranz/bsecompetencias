@@ -3,15 +3,15 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-#require 'metric_fu'
-#MetricFu::Configuration.run do |config|
+require 'metric_fu'
+MetricFu::Configuration.run do |config|
   #define which metrics you want to use
-#  config.metrics  = [:stats, :flay, :reek, :roodi, :flog, :rcov]
-#  config.graphs   = [:stats, :flay, :reek, :roodi, :flog, :rcov]
+  config.metrics  = [:stats, :flay, :reek, :roodi, :flog, :rcov]
+  config.graphs   = [:stats, :flay, :reek, :roodi, :flog, :rcov]
   #saikuro, churn and rails best practices were disabled because of bugs :(
 
-#  config.rcov[:rcov_opts] << "-Itest" # Needed to find test_helper
-#end
+  config.rcov[:rcov_opts] << "-Itest" # Needed to find test_helper
+end
 
 require 'rake'
 #require 'rake/testtask'
