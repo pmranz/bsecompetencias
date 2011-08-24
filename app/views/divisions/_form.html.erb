@@ -1,3 +1,4 @@
+<div class="contenedor_frm_mant" id="contenedor_frm_mant_divisions">
 <%= form_for(@division) do |f| %>
   <% if @division.errors.any? %>
     <div id="error_explanation">
@@ -11,15 +12,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
+  <div class="grupo_fields">
+    <div class="field">
+      <span class="label_frm"><%= f.label :name %></span> <span class="text_field_input"><%= f.text_field :name %></span>
+    </div>
+    <div class="field">
+      <span class="label_frm"><%= f.label :description %></span> <span class="text_field_input"><%= f.text_field :description %></span>
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit %> <%= link_to 'Cancelar', divisions_path %>
   </div>
 <% end %>
+</div>

@@ -1,3 +1,5 @@
 <% if user_signed_in? %>
   Bienvenido a BSE Evaluación de Desempeño
+<%# else %>
+  <%# redirect_to(:action => 'devise/sessions#new') %>
 <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110817161553) do
+ActiveRecord::Schema.define(:version => 20110823145314) do
 
   create_table "behaviors", :force => true do |t|
     t.integer  "skill_id"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(:version => 20110817161553) do
   end
 
   create_table "skills", :force => true do |t|
-    t.text     "name"
+    t.string   "name"
     t.text     "description"
     t.integer  "skill_type_id"
     t.datetime "created_at"

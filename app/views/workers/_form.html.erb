@@ -1,3 +1,4 @@
+<div class="contenedor_frm_mant" id="contenedor_frm_mant_workers">
 <%= form_for(@worker) do |f| %>
   <% if @worker.errors.any? %>
     <div id="error_explanation">
@@ -11,19 +12,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :document %><br />
-    <%= f.text_field :document %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="grupo_fields">
+    <div class="field">
+      <span class="label_frm"><%= f.label :name %></span> <span class="text_field_input"><%= f.text_field :name %></span>
+    </div>
+    <div class="field">
+      <span class="label_frm"><%= f.label :last_name %></span> <span class="text_field_input"><%= f.text_field :last_name %></span>
+    </div>
+    <div class="field">
+      <span class="label_frm"><%= f.label :document %></span> <span class="text_field_input"><%= f.text_field :document %></span>
+    </div>
+    <div class="actions">
+      <%= f.submit %> <%= link_to 'Cancelar', workers_path %>
+    </div>
   </div>
 <% end %>
+</div>

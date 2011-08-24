@@ -1,4 +1,5 @@
 class SkillsController < ApplicationController
+
   before_filter :load_skill_types, :except => [:destroy, :update, :index]
   before_filter :load_levels, :except => [:destroy, :update, :index]
 
@@ -92,7 +93,7 @@ class SkillsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
+
   private
   
   def load_skill_types
@@ -102,5 +103,6 @@ class SkillsController < ApplicationController
   def load_levels
     @levels = Level.all
   end
+
 
 end

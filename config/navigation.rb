@@ -50,10 +50,12 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>. 
     #
+    
+        
     primary.item :levels, 'Niveles', levels_path
-    </br>
     # Add an item which has a sub navigation (same params, but with block)
-    primary.item :skill_types, 'Competencias',  skill_types_path
+    primary.item :skills, 'Competencias',  skill_types_path
+    primary.item :skill_types, 'Tipos de Competencias',  skill_types_path
       # Add an item to the sub navigation (same params again)
      # sub_nav.item :key_2_1, 'name', skill_types_path
     #end
@@ -71,7 +73,7 @@ SimpleNavigation::Configuration.run do |navigation|
 
     # You can turn off auto highlighting for a specific level
     # primary.auto_highlight = false
-   #render_navigation
+    #render_navigation
   end
 
 end

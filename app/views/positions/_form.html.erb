@@ -13,6 +13,7 @@
 
 <div class="field">
     <%= f.label :department_id %><br />
+    <%= text_field_tag 'dep_name' %>     
     <%= f.text_field :department_id %> 
   </div>
   <div class="field">
@@ -27,3 +28,20 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<script type="text/javascript"> 
+$(document).ready(function() {
+  $('#dep_name').autocomplete({
+			source: '<%= departments_url(:type => 'autocomplete')%>',
+			minLength: 2,
+			select: function( event, ui ) {
+				console.log("volvi");
+		}
+});
+});
+
+</script>
+
+
+
+

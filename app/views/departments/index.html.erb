@@ -1,28 +1,29 @@
-<h1>Listing departments</h1>
+<h1>Departamentos</h1>
 
 <table class="tab_listados" id="tab_departments">
   <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Division</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>División</th>
     <th></th>
     <th></th>
+    <!--
     <th></th>
+    -->
+    <td><%= link_to image_tag("page_new.gif"), new_department_path %></td>
   </tr>
 
 <% @departments.each do |department| %>
   <tr>
     <td><%= department.name %></td>
     <td><%= department.description %></td>
-    <td><%= department.division_id %></td>
+    <td><%= Division.find(department.division_id).name %></td>
+    <!--
     <td><%= link_to 'Show', department %></td>
-    <td><%= link_to 'Edit', edit_department_path(department) %></td>
-    <td><%= link_to 'Destroy', department, :confirm => 'Are you sure?', :method => :delete %></td>
+    -->
+    <td><%= link_to image_tag("page_edit.png"), edit_department_path(department) %></td>
+    <td><%= link_to image_tag("page_delete.gif"), department, :confirm => '¿ Confirma este borrado ?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-<%= will_paginate @departments %>   
-
-<br />
-
-<%= link_to 'New Department', new_department_path %>
+<%= will_paginate @departments %>

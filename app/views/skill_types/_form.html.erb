@@ -1,3 +1,4 @@
+<div class="contenedor_frm_mant" id="contenedor_frm_mant_skill_types">
 <%= form_for(@skill_type) do |f| %>
   <% if @skill_type.errors.any? %>
     <div id="error_explanation">
@@ -11,11 +12,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <div class="grupo_fields">
+    <div class="field">
+      <span class="label_frm"><%= f.label :name %></span> <span class="text_field_input"><%= f.text_field :name %></span>
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit %> <%= link_to 'Cancelar', skill_types_path %>
+  </div>      
 <% end %>
+</div>
