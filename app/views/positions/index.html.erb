@@ -15,9 +15,9 @@
 
 <% @positions.each do |position| %>
   <tr>
-    <td><%= Department.find(position.department_id).name %></td>
-    <td><%= JobTitle.find(position.job_title_id).name %></td>
-    <td><%= Worker.find(position.worker_id).name %></td>
+    <td><%= position.department.name if position.department %></td>
+    <td><%= position.job_title.name if position.job_title %></td>
+    <td><%= position.worker.name if position.worker %></td>
     <!--
     <td><%= link_to 'Show', position %></td>
     -->

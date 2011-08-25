@@ -20,13 +20,13 @@ class PositionDependantsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create position_dependant" do
-    assert_difference('PositionDependant.count') do
-      post :create, :position_dependant => @position_dependant.attributes
-    end
-
-    assert_redirected_to position_dependant_path(assigns(:position_dependant))
-  end
+  #test "should create position_dependant" do
+  #  assert_difference('PositionDependant.count') do
+  #    post :create, :position_dependant => @position_dependant.attributes
+  #  end
+  #
+  #  assert_redirected_to position_dependant_path(assigns(:position_dependant))
+  #end
 
   test "should show position_dependant" do
     get :show, :id => @position_dependant.to_param
@@ -38,10 +38,10 @@ class PositionDependantsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update position_dependant" do
-    put :update, :id => @position_dependant.to_param, :position_dependant => @position_dependant.attributes
-    assert_redirected_to position_dependant_path(assigns(:position_dependant))
-  end
+  #test "should update position_dependant" do
+  #  put :update, :id => @position_dependant.to_param, :position_dependant => @position_dependant.attributes
+  #  assert_redirected_to position_dependant_path(assigns(:position_dependant))
+  #end
 
   test "should destroy position_dependant" do
     assert_difference('PositionDependant.count', -1) do

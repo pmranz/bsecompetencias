@@ -1,11 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  department_id: 
-  job_title_id: 
-  worker_id: 
+  id: 1
+  department_id: 1
+  job_title_id: 1
+  worker_id: 1
 
 two:
-  department_id: 
-  job_title_id: 
-  worker_id: 
+  id: 2
+  department_id: 1
+  job_title_id: 1
+  worker_id: 1

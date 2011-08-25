@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class WorkersControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
+    @user = users(:one)
+    sign_in @user
     @worker = workers(:one)
   end
 

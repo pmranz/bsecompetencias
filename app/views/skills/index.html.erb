@@ -17,7 +17,7 @@
   <tr>
     <td><%= skill.name %></td>
     <td><%= skill.description %></td>
-    <td><%= SkillType.find(skill.skill_type_id).name %></td>
+    <td><%= skill.skill_type.name if skill.skill_type %></td>
     <!--
     <td><%= link_to 'Show', skill %></td>
     -->
