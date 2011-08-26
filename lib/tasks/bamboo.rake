@@ -11,6 +11,7 @@ task :bamboo do
   Rake::Task["db:drop"].invoke
   Rake::Task["db:create"].invoke
   Rake::Task["db:migrate"].invoke
+  Rake::Task["metrics:all"].invoke
   Rake::Task["ci:setup:testunit"].invoke
   Rake::Task["test"].invoke
   Rake::Task["test:plugins"].invoke
