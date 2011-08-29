@@ -2,7 +2,13 @@ class WorkersController < ApplicationController
   # GET /workers
   # GET /workers.xml
   def index
-    @workers = Worker.paginate :page => params[:page], :per_page => 10
+        @fv = params[:filter_value]
+    
+    if @fv.nil?
+      @fv = ""
+    end
+    @fv = "%" + @fv + "%"
+    @workers = Worker.by_name(@fv).paginate :page => params[:page], :per_page => 10
 
     respond_to do |format|
       format.html # index.html.erb
