@@ -14,7 +14,10 @@
   <b>Document:</b>
   <%= @worker.document %>
 </p>
-
+<p>
+  <b>Num of Positions:</b>
+  <%= @worker.number_of_positions %>
+</p>
 
 <%= link_to 'Edit', edit_worker_path(@worker) %> |
 <%= link_to 'Back', workers_path %>

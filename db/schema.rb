@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110823145314) do
+ActiveRecord::Schema.define(:version => 20110826162949) do
 
   create_table "behaviors", :force => true do |t|
     t.integer  "skill_id"
@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(:version => 20110823145314) do
     t.string   "document"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "number_of_positions"
   end
 
 end

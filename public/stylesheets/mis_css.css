@@ -1,0 +1,6 @@
+#navegacion {margin: 0px 0px 4px 0px; background-color: #000066}
+#navegacion a {color: #CCCCCC; display:block; text-decoration:none; margin: 1px; font-weight:bold}
+#navegacion a:link {}
+#navegacion a:hover {color: #FFFFFF; background-color:#000000}
+#navegacion a:active {color: #99FFFF}
+#navegacion a:visited {}
