@@ -29,15 +29,16 @@
   
   <br/>
   
+  <!--
   <h2>Behaviors</h2>
-
+  -->
+  
 
   <%= render :partial => 'behaviors/behaviors_list',:locals => { :behaviors => @skill.behaviors, :form => skill_form } %>
 
   <%= link_to_add_fields "Agregar Nivel", skill_form, :behaviors %>
 
   <div id="new_behaviors"></div>
-
 
   <div class="actions">
     <%= skill_form.submit %>
